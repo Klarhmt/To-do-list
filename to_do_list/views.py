@@ -8,6 +8,9 @@ from . import models,serializers
 
 class TaskViewSet(ModelViewSet):
     queryset = models.Task.objects.all()
-    serializer_class = serializers.TaskSerializer
     permission_classes = [IsAuthenticated]
     
+    def get_serializer_class(self):
+        if self.request.method=='POST':
+            return serializers.CreateTaskSerializer
+        return serializers.TaskSerializer
