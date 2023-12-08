@@ -16,7 +16,7 @@
         <ul>
             {% for task in urgent_tasks %}
                 <li>
-                    Title: {{task.title}} - Description: {{task.description}} - Status: {{tasks.completion_status}} - Due by: {{due_by_date}} - Urgent?: {{task.is_it_urgent}} - Created: {{task.creation_date}}
+                    Title: {{task.title}} - Description: {{task.description}} - Status: {{task.completion_status}} - Due by: {{task.due_by_date}} - Urgent?: {{task.is_it_urgent}} - Created: {{task.creation_date}}
                 </li>
             {% endfor %}
         </ul>
@@ -28,7 +28,7 @@
         <ul>
             {% for task in pending_tasks %}
                 <li>
-                    Title: {{task.title}} - Description: {{task.description}} - Status: {{tasks.completion_status}} - Due by: {{due_by_date}} - Urgent?: {{task.is_it_urgent}} - Created: {{task.creation_date}}
+                    Title: {{task.title}} - Description: {{task.description}} - Status: {{task.completion_status}} - Due by: {{task.due_by_date}} - Urgent?: {{task.is_it_urgent}} - Created: {{task.creation_date}}
                 </li>
             {% endfor %}
         </ul>
@@ -39,7 +39,7 @@
         <ul>
             {% for task in completed_tasks %}
                 <li>
-                    Title: {{task.title}} - Description: {{task.description}} - Status: {{tasks.completion_status}} - Due by: {{due_by_date}} - Urgent?: {{task.is_it_urgent}} - Created: {{task.creation_date}}
+                    Title: {{task.title}} - Description: {{task.description}} - Status: {{task.completion_status}} - Due by: {{task.due_by_date}} - Urgent?: {{task.is_it_urgent}} - Created: {{task.creation_date}}
                 </li>
             {% endfor %}
         </ul>
