@@ -28,5 +28,5 @@ class Task(models.Model):
     completion_status = models.CharField(max_length=255,choices=COMPLETION_CHOICES,default=TASK_PENDING)
     is_it_urgent = models.CharField(max_length=255,choices=URGENCY_CHOICES,default=NOT_URGENT)
     due_by_date = models.DateField(null=True)
-    task_creation_date = models.DateField(auto_now_add=True)
+    creation_date = models.DateField(auto_now_add=True)
     
