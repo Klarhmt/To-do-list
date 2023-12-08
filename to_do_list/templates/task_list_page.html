@@ -1,0 +1,49 @@
+<!-- tasks_template.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Task Management</title>
+</head>
+<body>
+
+    <div style="text-align: center;">
+        <h1>Task Management</h1>
+    </div>
+
+    
+    <div style="margin-top: 20px; text-align: center;">
+        <h2>Urgent Tasks</h2>
+        <ul>
+            {% for task in urgent_tasks %}
+                <li>
+                    Title: {{task.title}} - Description: {{task.description}} - Status: {{tasks.completion_status}} - Due by: {{due_by_date}} - Urgent?: {{task.is_it_urgent}} - Created: {{task.creation_date}}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+
+    <div style="margin-top: 20px; text-align: center;">
+        <h2>Pending Tasks</h2>
+        <ul>
+            {% for task in pending_tasks %}
+                <li>
+                    Title: {{task.title}} - Description: {{task.description}} - Status: {{tasks.completion_status}} - Due by: {{due_by_date}} - Urgent?: {{task.is_it_urgent}} - Created: {{task.creation_date}}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div style="margin-top: 20px; text-align: center;">
+        <h2>Completed Tasks</h2>
+        <ul>
+            {% for task in completed_tasks %}
+                <li>
+                    Title: {{task.title}} - Description: {{task.description}} - Status: {{tasks.completion_status}} - Due by: {{due_by_date}} - Urgent?: {{task.is_it_urgent}} - Created: {{task.creation_date}}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+</body>
+</html>
