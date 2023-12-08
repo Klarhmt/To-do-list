@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'debug_toolbar',
     'to_do_list'
 ]
@@ -134,3 +135,18 @@ AUTH_USER_MODEL='to_do_list.User'
 INTERNAL_IPS = [
     '127.0.0.1',
 ]
+
+DEFAULT_AUTHENTICATION_CLASSES:(
+    'rest_framework_simplejwt.authentication.JWTAuthentication',
+)
+
+SIMPLE_JWT={
+    'AUTH_HEADER_TYPES':('JWT',),
+}
+
+DJOSER ={
+    'SERIALIZERS':{
+        'user_create':'store.serializers.UserCreateSerializer',
+        'current_user':'store.serializers.UserSerializer',
+    }
+}
