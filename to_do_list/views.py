@@ -8,8 +8,8 @@ from . import models,serializers
 # Create your views here.
 
 def task_list_view(request):
-    urgent_tasks = models.Task.objects.filter(is_it_urgent='Y')
-    pending_tasks = models.Task.objects.filter(completion_status='P')
+    urgent_tasks = models.Task.objects.filter(completion_status='P',is_it_urgent='Y')
+    pending_tasks = models.Task.objects.filter(completion_status='P',is_it_urgent='N')
     completed_tasks = models.Task.objects.filter(completion_status='C')
     
     context = {
